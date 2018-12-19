@@ -1,0 +1,50 @@
+@import '../../../theme/variables';
+
+$default-height: 40px;
+
+.container {
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex: auto;
+}
+
+select {
+  appearance: none;
+  background: url(../../../assets/icons/double-arrow-down.svg) no-repeat;
+  background-size: 16px;
+  background-position-x: 95%;
+  background-position-y: 50%;
+  font-size: 16px;
+  height: $default-height;
+  padding: 5px;
+  padding-right: 30px;
+  min-width: 190px;
+}
+
+.placeholder {
+  padding-right: 10px;
+}
+
+div.notification {
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  text-align: -webkit-center;
+  width: 50px;
+}
+
+mat-icon {
+  color: #fff;
+}
+
+.align-right {
+  justify-content: flex-end;
+  flex: auto;
+  flex-direction: row;
+}
+
+.mat-select-value {
+  color: #fff !important;
+}

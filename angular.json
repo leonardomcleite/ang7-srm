@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ang6-srm": {
+    "ang7-srm": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "srm",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ang6-srm",
+            "outputPath": "dist/ang7-srm",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ang6-srm:build"
+            "browserTarget": "ang7-srm:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ang6-srm:build:production"
+              "browserTarget": "ang7-srm:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ang6-srm:build"
+            "browserTarget": "ang7-srm:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "ang6-srm-e2e": {
+    "ang7-srm-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ang6-srm:serve"
+            "devServerTarget": "ang7-srm:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ang6-srm:serve:production"
+              "devServerTarget": "ang7-srm:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "ang6-srm"
+  "defaultProject": "ang7-srm"
 }

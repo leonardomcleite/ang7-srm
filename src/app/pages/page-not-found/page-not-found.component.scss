@@ -1,0 +1,36 @@
+@import '../../../theme/variables';
+
+.container {
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  height: calc(100% - 65px);
+}
+
+.error-code {
+  font-size: 150px;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.message,
+.sub-message {
+  color: rgba(0, 0, 0, .54);
+}
+
+.message {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.mat-flat-button {
+  margin-top: 16px;
+  border-radius: 0px;
+  // border: 1px solid $color-accent;
+  font-size: 16px;
+  background-color: transparent;
+}

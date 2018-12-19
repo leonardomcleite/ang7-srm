@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+// @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@import 'material-design-icons/iconfont/material-icons.css';
+@import './theme/srm_theme';
+@import './theme/variables';
+
+* {
+  font-family: 'Raleway', sans-serif;
+  outline: none !important;
+}
+
+html, body {
+  font-size: 16px;
+  margin: 0;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input {
+  border: 0px;
+  font-size: 16px;
+}
+
+img {
+  cursor: pointer;
+}
+
+div.mat-form-field-wrapper {
+  width: 100% !important;
+  padding-bottom: 0px !important;
+}
+
+button {
+  border-radius: 0px !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: transparent !important;
+}
+
+.mat-form-field-underline {
+  display: none !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-infix {
+  padding: 0px !important;
+}
+
+.mat-form-field-infix {
+  border-top: 16px solid transparent !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  border-radius: 0px !important;
+  padding: 0px !important;
+  height: 45px !important;
+  line-height: 14px !important;
+  text-align: center !important;
+}
+
+.mat-select-arrow {
+  background: url(assets/icons/double-arrow-down.svg) no-repeat !important;
+  background-size: 16px !important;
+  background-position-x: 10% !important;
+  background-position-y: 70% !important;
+  border-left: 0px !important;
+  border-right: 0px !important;
+  border-top: 0px !important;
+  width: 20px !important;
+  height: 45px !important;
+}
+
+.mat-form-field-infix {
+  min-width: 130px !important;
+  width: unset !important;
+}
+
+.mat-select-value-custom {
+  display: table-cell;
+  max-width: 0;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fff !important;
+}

@@ -9,6 +9,6 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to ang6-srm!');
+    // expect(page.getParagraphText()).toEqual('Welcome to ang7-srm!');
   });
 });

@@ -1,0 +1,11 @@
+<div class="header">
+  <div class="title">
+    <div *ngIf="headerOptions?.icon === 'graph'">
+      <mat-icon class="icon-primary" svgIcon="graph"></mat-icon>
+      <mat-icon class="icon-graph-header">sort</mat-icon>
+    </div>
+    <mat-icon mat-icon class="icon-primary" [svgIcon]="headerOptions?.icon" *ngIf="headerOptions?.icon !== 'graph'"></mat-icon>
+    <span class="title-panel" [class.graph]="headerOptions?.icon === 'graph'">{{headerOptions?.title}}</span>
+  </div>
+  <div class="content"><ng-content></ng-content></div>
+</div>

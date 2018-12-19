@@ -1,0 +1,15 @@
+<mat-list>
+  <div *ngFor="let menu of menus">
+    <mat-list-item matRipple [routerLink]="menu.route">
+      <div *ngIf="menu.svgIcon === 'graph'">
+        <mat-icon class="svgIcon-white" svgIcon="graph"></mat-icon>
+        <mat-icon class="svgIcon-graph">sort</mat-icon>
+      </div>
+      <mat-icon class="svgIcon-white" [svgIcon]="menu.svgIcon" *ngIf="menu.svgIcon !== 'graph' && menu.svgIcon"></mat-icon>
+      <mat-icon class="icon-white" *ngIf="menu.icon">{{menu?.icon}}</mat-icon>
+      <span class="name-menu">{{menu.name}}</span>
+      <div class="marker" *ngIf="menu.route === activeRoute"></div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </div>
+</mat-list>

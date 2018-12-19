@@ -1,0 +1,40 @@
+<srm-page-header [headerOptions]="headerOptions">
+  <srm-custom-select
+    style="margin-bottom: 10px;"
+    placeholder="Produto"
+    [(optionSelected)]="product"
+    [data]="['Todos', 'Oprion2']">
+  </srm-custom-select>
+</srm-page-header>
+<mat-card class="left mat-elevation-z6" [@FadeInAndFadeOut]>
+  <mat-card-title>Atalhos</mat-card-title>
+  <mat-card-content class="content">
+    <div class="card-left">
+      <span class="title">Operacional</span>
+      <button mat-stroked-button *ngFor="let shortcutOperational of shortcutsOperational">{{shortcutOperational}}</button>
+    </div>
+    <div class="card-right">
+      <span class="title">Geral</span>
+      <button mat-stroked-button *ngFor="let shortcutGeneral of shortcutsGeneral">{{shortcutGeneral}}</button>
+    </div>
+  </mat-card-content>
+</mat-card>
+<mat-card class="right mat-elevation-z6" *ngIf="show" [@FadeInAndFadeOut]>
+  <mat-card-title>
+    Alertas 
+    <mat-card-subtitle>Últimos 5 dias</mat-card-subtitle>
+  </mat-card-title>
+  <mat-card-content class="content-list">
+    <div class="list" *ngFor="let action of actions; let i = index">
+      <span>{{action.label}}</span>
+      <srm-custom-select
+        width="80%"
+        class="select"
+        *ngIf="action.selectable"
+        [(optionSelected)]="action.value"
+        [data]="['Ações', 'Oprion2']">
+      </srm-custom-select>
+      <mat-divider></mat-divider>
+    </div>
+  </mat-card-content>
+</mat-card>

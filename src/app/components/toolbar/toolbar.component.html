@@ -1,0 +1,33 @@
+<mat-toolbar>
+  <mat-icon class="icon-menu" (click)="showSide.emit()">menu</mat-icon>
+  <img class="logo" src="assets/logo/srm_logo.png" alt="logotipo" routerLink="">
+  <div class="content-right">
+    <srm-custom-select
+      style="line-height: 45px;"
+      *ngIf="!changeWidth"
+      width="180px"
+      placeholder="Grupo Econômico"
+      [(optionSelected)]="economyGroup"
+      [data]="[economyGroup]">
+    </srm-custom-select>
+    <srm-custom-select 
+      *ngIf="!changeWidth"
+      width="160px"
+      icon="person"
+      backgroundColor="darken"
+      [(optionSelected)]="userLogged.name"
+      [data]="[userLogged.name]">
+    </srm-custom-select>
+    <div class="notification"
+      [matTooltip]="'Você tem ' + notifications?.length + ' notificações'"
+      (click)="openBottomSheet()">
+      <mat-icon
+        [class.has-notifications]="notifications?.length > 0"
+        [matBadge]="notifications?.length > 9 ? '9+' : notifications?.length"
+        matBadgeColor="warn" *ngIf="notifications?.length > 0">notifications_active</mat-icon>
+      <mat-icon
+      [matBadge]="0"
+      matBadgeColor="warn" *ngIf="notifications?.length === 0">notifications</mat-icon>
+    </div>
+  </div>
+</mat-toolbar>

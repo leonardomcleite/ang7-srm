@@ -1,0 +1,25 @@
+$height-default: 64px;
+
+.form {
+    justify-content: flex-end;
+    padding: 0 10px;
+    display: flex;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+}
+
+.form-field {
+    display: flex;
+    width: 100%;
+    input {
+        height: $height-default;
+        width: 100%;
+        text-align: right;
+    }
+    .mat-icon {
+        line-height: $height-default;
+        height: $height-default;
+        padding: 0 10px;
+    }
+}
+

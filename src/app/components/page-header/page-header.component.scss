@@ -1,0 +1,56 @@
+@import '../../../theme/variables';
+
+@media only screen and (max-width: 355px) {
+  .icon-graph-header {
+    top: -63px !important;
+    left: 7px !important;
+  }
+  .graph {
+    line-height: 35px !important;
+  }
+}
+
+$height-default: 47px;
+
+.icon-primary {
+  width: 30px;
+  height: $height-default;
+  line-height: $height-default;
+}
+
+div.title {
+  display: inline-flex;
+  height: $height-default;
+  line-height: $height-default;
+}
+
+span.title-panel {
+  font-size: 26px;
+  padding-left: 15px;
+  line-height: $height-default;
+  height: $height-default;
+}
+
+div.header {
+  justify-content: left;
+  margin: 10px 20px;
+  line-height: $height-default;
+}
+
+div.content {
+  float: right;
+  justify-content: right;
+  display: inline-flex;
+}
+
+.icon-graph-header {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  position: relative;
+  font-size: 17px;
+  height: 19px;
+  width: 19px;
+  top: -15px;
+  left: -22px;
+  border-radius: 50%;
+}

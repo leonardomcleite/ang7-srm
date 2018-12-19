@@ -1,0 +1,9 @@
+<div class="content-breadcrumb">
+  <ol class="breadcrumb">
+    <span routerLink="" class="home-route child">Página inicial</span>
+    <li *ngFor="let breadcrumb of breadcrumbs; let i = index">
+      <mat-icon class="arrow">keyboard_arrow_right</mat-icon>
+      <span class="child" [routerLink]="[breadcrumb.url, breadcrumb.params]">{{breadcrumb.title}}</span>
+    </li>
+  </ol>
+</div>

@@ -1,0 +1,46 @@
+<ng-container>
+  <div class="header">
+    <srm-toolbar class="toolbar" (showSide)="sidenav.toggle()" [(changeWidth)]="toolbar.matches"></srm-toolbar>
+  </div>
+
+  <mat-sidenav-container class="container">
+    <mat-sidenav #sidenav [opened]="opened" class="menu" 
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="!mobileQuery.matches"
+      fixedTopGap="0" fixedBottomGap="0">
+      <srm-input-search class="input-search" [textAlign]="textInputAlign"></srm-input-search>
+      <srm-side-menu class="menu"></srm-side-menu>
+      <div class="selects" *ngIf="toolbar.matches">
+        <srm-custom-select
+          style="color: #fff"
+          color="light"
+          backgroundColor="darken"
+          placeholder="Grupo Econômico"
+          align="right"
+          [(optionSelected)]="economyGroup"
+          [data]="[economyGroup]">
+        </srm-custom-select>
+        <mat-divider></mat-divider>
+        <srm-custom-select
+          style="color: #fff"
+          icon="person"
+          color="light"
+          backgroundColor="darken"
+          align="left"
+          [(optionSelected)]="userLogged.name"
+          [data]="[userLogged.name]">
+        </srm-custom-select>
+        <mat-divider></mat-divider>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="content">
+      <srm-breadcrumb></srm-breadcrumb>
+      <ng-content></ng-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>
+
+<ng-template #template let-lessonsCounter="template">
+  
+</ng-template>

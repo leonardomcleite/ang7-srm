@@ -1,0 +1,10 @@
+<mat-nav-list>
+  <div class="content-btn">
+    <button mat-raised-button color="primary" (click)="clearAll()">Marcar todas como Lidas</button>
+    <button mat-raised-button color="primary" (click)="close()">Sair</button>
+  </div>
+  <a mat-list-item (click)="closeAndRemoveNotification(i)" *ngFor="let notification of notifications; let i = index">
+    <span mat-line>{{notification?.title}}</span>
+    <span mat-line>{{notification?.subtitle}}</span>
+  </a>
+</mat-nav-list>

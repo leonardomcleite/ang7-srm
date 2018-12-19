@@ -1,0 +1,22 @@
+.welcome {
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  height: calc(100% - 67px);
+  min-height: 220px;
+}
+
+.logo {
+  opacity: 0.3;
+  margin: 31px auto 0 auto;
+  width: 100px;
+}
+
+h1, h4 {
+  font-weight: normal;
+}
+
+h4 {
+  margin: 0 2em;
+}

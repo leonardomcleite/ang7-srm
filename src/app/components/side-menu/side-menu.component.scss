@@ -1,0 +1,45 @@
+@import '../../../theme/variables';
+
+.svgIcon-white {
+  fill: #fff !important;
+}
+
+.icon-white {
+  color: #fff !important;
+  font-size: 30px;
+  height: 30px;
+}
+
+.name-menu {
+  padding-left: 16px;
+  color: #fff !important;
+}
+
+mat-list-item.mat-list-item {
+  outline: none;
+  cursor: pointer;
+}
+
+.mat-list-base {
+  padding-top: 0px;
+}
+
+.marker {
+  width: 0px;
+  height: 0px;
+  float: right;
+  position: absolute;
+  left: $width-menu - 10px;
+}
+
+.svgIcon-graph {
+  transform: rotate(-90deg);
+  position: absolute;
+  font-size: 17px;
+  height: 13px;
+  width: 17px;
+  top: 17px;
+  left: 19px;
+  border-radius: 50%;
+  color: #fff !important;
+}

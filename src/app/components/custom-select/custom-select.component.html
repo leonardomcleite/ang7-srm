@@ -1,0 +1,19 @@
+<div class="container">
+  <span class="placeholder" *ngIf="placeholder">{{placeholder}}:&nbsp;</span>
+  <div class="notification" [class.darken]="backgroundColor === 'darken'" *ngIf="icon">
+    <mat-icon class="mat-18">{{icon}}</mat-icon>
+  </div>
+
+  <mat-form-field appearance="fill"
+  [style.width]="width"
+  [class.align-right]="align === 'right'"
+  [class.align-left]="align === 'left'"
+  [class.align-center]="align === 'center'"
+  [class.darken]="backgroundColor === 'darken'">
+    <mat-select [(ngModel)]="optionSelected" [style.width]="width">
+      <mat-option *ngFor="let option of data" [value]="option">
+        <span>{{option}}</span>
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

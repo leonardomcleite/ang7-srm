@@ -1,0 +1,44 @@
+@import '../../../theme/variables';
+
+.header {
+  width: 100%;
+  height: $width-container;
+
+  .input-search {
+    width: $width-menu;
+  }
+
+  .toolbar {
+    width: 100%;
+  }
+}
+
+.container {
+  width: 100%;
+  display: inline-flex;
+  height: calc(100% - #{$width-container});
+
+  .menu,
+  .input-search {
+    width: $width-menu
+  }
+
+  .menu {
+    border: 0px;
+  }
+
+  .toolbar {
+    width: calc(100% - #{$width-menu});
+  }
+
+  .content {
+    padding: 16px;
+    width: 100%;
+    overflow: overlay;
+    height: calc(100% - 32px);
+  }
+}
+
+.selects {
+  padding-top: 5px;
+}

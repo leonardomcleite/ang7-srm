@@ -1,0 +1,53 @@
+@import '../../../theme/variables';
+
+@media only screen and (max-width: 1110px) {
+  mat-card {
+    width: 100% !important;
+    margin: 0px !important;
+
+    &.right {
+      margin-top: 16px !important;
+    }
+  }
+
+}
+
+mat-card {
+  border-radius: 0px;
+  background-color: white;
+  padding: 0px;
+}
+
+mat-card-title.mat-card-title {
+  height: 45px;
+  line-height: 45px;
+  padding: 16px;
+  margin-bottom: 0px;
+}
+
+mat-card-subtitle.mat-card-subtitle {
+  height: 45px;
+  line-height: 45px;
+  float: right;
+  font-size: 16px;
+}
+
+mat-card-content {
+  min-height: 210px;
+  padding: 16px;
+
+  &.content {
+    display: flex;
+  }
+
+  &.content-list {
+    display: block;
+  }
+}
+
+.title {
+  width: 100%;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+}

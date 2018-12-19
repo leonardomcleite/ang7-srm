@@ -1,0 +1,197 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$dark-primary-text: rgba(black, 0.87);
+$light-primary-text: white;
+$background-color: #fafafa;
+
+$app-blue-primary: (
+  50: #e8eaf6,
+  100: #c5cae9,
+  200: #9fa8da,
+  300: #7986cb,
+  400: #5c6bc0,
+  500: #00223c,
+  600: #3949ab,
+  700: #303f9f,
+  800: #283593,
+  900: #1a237e,
+  A100: #8c9eff,
+  A200: #536dfe,
+  A400: #3d5afe,
+  A700: #304ffe,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$app-blue-secondary: (
+  50: #e1f5fe,
+  100: #b3e5fc,
+  200: #81d4fa,
+  300: #4fc3f7,
+  400: #29b6f6,
+  500: #4997d1,
+  600: #039be5,
+  700: #0288d1,
+  800: #0277bd,
+  900: #01579b,
+  A100: #80d8ff,
+  A200: #40c4ff,
+  A400: #00b0ff,
+  A700: #0091ea,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$app-red: (
+  50: #ffebee,
+  100: #ffcdd2,
+  200: #ef9a9a,
+  300: #e57373,
+  400: #ef5350,
+  500: #f44336,
+  600: #e53935,
+  700: #d32f2f,
+  800: #c62828,
+  900: #b71c1c,
+  A100: #ff8a80,
+  A200: #ff5252,
+  A400: #ff1744,
+  A700: #d50000,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$custom-app-primary: mat-palette($app-blue-primary);
+$custom-app-accent:  mat-palette($app-blue-secondary, A200, A100, A400);
+$custom-app-warn:    mat-palette($app-red);
+
+$custom-app-theme: mat-light-theme($custom-app-primary, $custom-app-accent, $custom-app-warn);
+
+@include angular-material-theme($custom-app-theme);
+
+
+// Custom color components
+
+mat-sidenav {
+  background-color: mat-color($app-blue-primary, 500) !important;
+}
+
+button.mat-stroked-button {
+  border-color: mat-color($app-blue-secondary, 500) !important;
+}
+
+mat-card-title.mat-card-title {
+  border-bottom: 1px solid #ccc;
+}
+
+mat-divider.mat-divider {
+  border-top-color: mat-color($app-blue-secondary, 500) !important;
+}
+
+.marker {
+  border-top: 10px solid mat-color($app-blue-primary, 500);
+  border-right: 10px solid $background-color;
+  border-bottom: 10px solid mat-color($app-blue-primary, 500);
+}
+
+select {
+  border: 1px solid mat-color($app-blue-secondary, 500);
+}
+
+div.notification {
+  background-color: mat-color($app-blue-secondary, 500);
+}
+
+.svgIcon-graph {
+  color: #b3b8bb;
+  background-color: mat-color($app-blue-primary, 500);
+}
+
+.icon-primary {
+  fill: mat-color($app-blue-primary, 500) !important;
+}
+
+span.title-panel {
+  color: mat-color($app-blue-primary, 500);
+}
+
+.icon-graph-header {
+  color: mat-color($app-blue-primary, 500);
+  background-color: $background-color;
+}
+
+::-webkit-scrollbar, scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track, scrollbar-track {
+  box-shadow: inset 0 0 5px $background-color;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb, scrollbar-thumb {
+  background: mat-color($app-blue-primary, 500);
+  border-radius: 10px;
+}
+
+
+mat-form-field {
+  border: 1px solid mat-color($app-blue-secondary, 500);
+  &.darken {
+    border: 1px solid mat-color($app-blue-primary, 500);
+  }
+}
+
+.darken {
+  background-color: mat-color($app-blue-primary, 500) !important;
+  border: 1px solid  mat-color($app-blue-primary, 500);
+  color: #fff;
+}
+
+.mat-snack-bar-container {
+  background: mat-color($app-blue-primary, 500) !important;
+}

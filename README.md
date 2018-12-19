@@ -1,27 +1,51 @@
-# Ang6Srm
+# Portal SRM
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.1.
+## Sobre o projeto
+Este projeto foi criado para um processo seletivo de front-end. O framework utilizado é Angular 7.
 
-## Development server
+## Telas
+### Protótipo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![alt text](src/assets/screenshot/prototipo-recebido.png)
 
-## Code scaffolding
+### Resultado
+![alt text](src/assets/screenshot/homepage.png)
+![alt text](src/assets/screenshot/painel-de-gestao.png)
+![alt text](src/assets/screenshot/conta-digital.png)
+![alt text](src/assets/screenshot/recebiveis.png)
+![alt text](src/assets/screenshot/pagina-nao-encontrada.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Requisitos
 
-## Build
+Instale o servidor [Node Server](http://nodejs.org/) juntamente com o gerenciador de dependencias [NPM](https://npmjs.org/).
+Abaixo estão as versões instaladas que funcionam:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+    $ node --version
+    v9.6.1
 
-## Running unit tests
+    $ npm --version
+    5.6.0
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Começando
+Instalando o projeto:
 
-## Running end-to-end tests
+    # Se ainda não tem nenhum repositório local, crie uma pasta, abra-a no terminal e digite o comando abaixo:
+    $ git init
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+    Depois:
+    $ git clone https://github.com/leonardomcleite/ang7-srm.git
+    $ cd ang7-srm
+    $ npm install
+    $ npm start
 
-## Further help
+## Recursos Utilizados
+Neste projeto foi utilizado:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    Responsividade com mediaQuery (Desktop | Mobile First)
+    Tematização e Variaveis com SASS
+    Navegação com Angular Routing
+    Animação com Angular Animations
+    Componentes Padrão do Angular Material
+    Serviços
+    Reutilização de Código
+    
